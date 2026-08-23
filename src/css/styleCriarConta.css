@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -32,7 +33,6 @@
         align-items: center;
         justify-content: center;
     }
-
     main{
         width: 420px;
         height: 620px;
@@ -47,13 +47,10 @@
         inset -4px -4px 8px 0px #bfc0d13c;
 
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-
+        
         
     }
-
     .logoContainer{
         display: flex;
         align-items: center;
@@ -61,19 +58,16 @@
         flex-direction: column;
         margin-top: 15px;
     }
-
-    .logoContainer > .titLogo{
+     .logoContainer > .titLogo{
         color: var(--corLogo);
         font-family: var(--fontLogo);
         font-size: 1.7em;
        
     }
-
     .cabecalhoContainer{
         margin-top: 25px;
        
     }
-
     .cabecalhoContainer > .txtCabecalho{
         text-align: center;
         color: var(--corTxt1);
@@ -86,16 +80,36 @@
         font-size: .9em;
     }
 
-    .formulario{
-        width: 100%;
+    .inputsContainer{
+        /* border: 1px solid red; */
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .inputContainer{
+        margin-left: 10px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        flex-direction: column;
-        margin-top: 50px;
+        
     }
 
-    .formulario > .inputs{
+    .inputContainer > .iconRpPassword{
+        opacity: 0;
+    }
+
+    .inputContainer > img{
+        width: 30px;
+    }
+
+    .animaIcon{
+        animation: animaIcon .4s ease-in-out;
+
+    }
+
+    .inputContainer > input{
         background-color: #31323E;
         border: 1px solid #bfc0d165;
         width: 250px;
@@ -104,110 +118,89 @@
         text-indent: 10px;
         color: var(--corTxt1);
         font-size: .9em;
+        margin-left: 5px;
+
+        
     }
 
-    .inputs:focus{
+     .inputContainer > input:focus{
         outline: none;
         border: 1px solid var(--corLogo);
     }
 
-    .formulario > .senha{
+    .btnCriarConta{
         margin-top: 30px;
-    }
-
-    .formulario > .txtEsqueceu{
-        color: var(--corTxt1);
-        align-self: flex-end;
-        margin-right: 80px;
-        margin-top: 10px;
-        font-size: .9em;
-        cursor: pointer;
-    }
-
-    .txtEsqueceu:hover{
-        color: #60519B;
-    }
-
-    .formulario > .btnEntrar{
-        margin-top: 50px;
         width: 250px;
         height: 35px;
         border-radius: 5px;
-        border: transparent;
-        font-size: 1em;
-        color: var(--corFundo1);
-        background-color: var(--corTxt1);
-        cursor: pointer;
+        align-self: center;
 
-        transition: .2s ease;
+        background-color: var(--corLogo);
+        color: var(--corTxt1);
+        border: transparent;
+
+        cursor: pointer;
+        transition: ease .3s;
     }
 
-    .btnEntrar:hover, .btnGoogle:hover{
+    .btnCriarConta:hover{
         transform: translateY(-3px);
     }
 
-    .separadorContainer{
-        /* border: 1px solid red; */
+    .voltarContainer{
+        margin-left: 30px;
         margin-top: 30px;
-        width: 390px;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
 
+        align-self: self-start;
+
+        cursor: pointer;
     }
 
-    .linha{
-        border: 1px solid #484855;
-        width: 120px;
+    .voltarContainer > img{
+        width: 20px;
+        animation: animaBack 2s infinite ease-in-out;
     }
 
-    .separadorContainer > p{
+    .voltarContainer > p{
+        color: var(--corTxt1);
+        font-size: .9em;
+        letter-spacing: .3px;
+    }
+
+    .voltarContainer a{
+        text-decoration: none;
         color: var(--corTxt1);
     }
 
-    .btnGoogle{
-        width: 250px;
-        height: 40px;
-        border-radius: 5px;
-        margin-top: 20px;
 
-        background-color: var(--corFundo1);
-        border: transparent;
-        color: var(--corTxt2);
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: .2s ease;
 
+
+    @keyframes animaIcon{
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-3px);
+        }
+        100%{
+            transform: translateY(0);
+        }
     }
 
-    .btnGoogle > img{
-        width: 20px;
-       
+     @keyframes animaBack{
+        0%{
+            transform: translateX(0);
+        }
+        50%{
+            transform: translateX(3px);
+        }
+        100%{
+            transform: translateY(0);
+        }
     }
-
-    .btnGoogle > span{
-        font-size: 1em;
-        margin-left: 5px;
-    }
-
-    .txtNaoResgistrado{
-        margin-top: 25px;
-        text-align: center;
-        color: var(--corTxt2);
-        font-size: .9em;
-        cursor: pointer;
-    }
-
-    .txtNaoResgistrado > span{
-        color: var(--corLogo);
-    }
-
-    a{
-        text-decoration: none;
-    }
-
-    
 }
