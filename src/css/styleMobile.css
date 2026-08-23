@@ -34,7 +34,7 @@
     }
 
     main{
-        width: 420px;
+        width: calc(100% - 24px);
         height: 620px;
 
         background-color: var(--corFundo2);
