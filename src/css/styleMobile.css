@@ -34,8 +34,8 @@
     }
 
     main{
-        width: 450px;
-        height: 600px;
+        width: 420px;
+        height: 620px;
 
         background-color: var(--corFundo2);
         border-radius: 10px;
@@ -45,6 +45,11 @@
         inset -4px 4px 8px 0px #bfc0d13c,
         inset 4px -4px 8px 0px #bfc0d13c,
         inset -4px -4px 8px 0px #bfc0d13c;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .logoContainer{
@@ -91,7 +96,7 @@
     .formulario > .inputs{
         background-color: #31323E;
         border: 1px solid #bfc0d165;
-        width: 280px;
+        width: 250px;
         height: 35px;
         border-radius: 5px;
         text-indent: 10px;
@@ -123,7 +128,7 @@
 
     .formulario > .btnEntrar{
         margin-top: 50px;
-        width: 280px;
+        width: 250px;
         height: 35px;
         border-radius: 5px;
         border: transparent;
@@ -142,16 +147,16 @@
     .separadorContainer{
         /* border: 1px solid red; */
         margin-top: 30px;
-
+        width: 390px;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
 
     }
 
     .linha{
         border: 1px solid #484855;
-        width: 180px;
+        width: 120px;
     }
 
     .separadorContainer > p{
@@ -159,10 +164,9 @@
     }
 
     .btnGoogle{
-        width: 280px;
+        width: 250px;
         height: 40px;
         border-radius: 5px;
-        margin-left: 80px;
         margin-top: 20px;
 
         background-color: var(--corFundo1);
@@ -198,4 +202,6 @@
     .txtNaoResgistrado > span{
         color: var(--corLogo);
     }
+
+    
 }
