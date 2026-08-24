@@ -117,8 +117,8 @@
 
     .formulario > .txtEsqueceu{
         color: var(--corTxt1);
-        align-self: flex-end;
-        margin-right: 80px;
+        align-self: center;
+        margin-left: 115px;
         margin-top: 10px;
         font-size: .9em;
         cursor: pointer;
