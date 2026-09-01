@@ -1,0 +1,249 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*PALETA*/
+    --corFundo1: #1E202C;
+    --corFundo2: #31323E;
+    --corTxt2: #BFC0D1;
+    --corTxt1: #F0F1F8;
+    --corLogo: #60519B;
+
+    /*FONTES*/
+    --fontLogo: "Outfit", sans-serif;
+    --fontGeral: "Inter", sans-serif;
+
+    font-family: var(--fontGeral);
+}
+
+body{
+        width: 100%;
+        height: 100vh;
+
+        background: radial-gradient(
+            circle at 20% 30%,
+            rgba(129,107,215,0.18),
+            transparent 45%
+        ),
+        #1E202C;
+        background-size: 200% 200%;
+        animation: luzFundo 12s ease-in-out infinite alternate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .animar{
+        opacity: 0;
+        animation: surgirEsquerda 0.6s ease forwards;
+    }
+    main{
+        width: calc(100% - 500px);
+        height: 620px;
+
+        background-color: var(--corFundo2);
+        border-radius: 20px;
+
+        box-shadow: 
+        inset  4px 4px 8px 0px #bfc0d13c,
+        inset -4px 4px 8px 0px #bfc0d13c,
+        inset 4px -4px 8px 0px #bfc0d13c,
+        inset -4px -4px 8px 0px #bfc0d13c;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+      .logoContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        animation-delay: 0.1s;
+    }
+    .logoContainer > img{
+        width: 30px;
+    }
+    .logoContainer > .titLogo{
+        color: var(--corLogo);
+        font-family: var(--fontLogo);
+        font-size: 2em;
+    }
+     .cabecalhoContainer{
+        animation-delay: 0.2s;
+    }
+
+    .cabecalhoContainer > .txtCabecalho{
+        text-align: center;
+        color: var(--corTxt1);
+    }
+    .cabeca1{
+        font-size: 1.5em;
+    }
+     .cabeca2{
+        margin-top: 5px;
+        font-size: .9em;
+    }
+    .formulario{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 20px;
+
+        
+    }
+     .formulario > .inputs{
+        background-color: #31323E;
+        border: 1px solid #bfc0d165;
+        width: 300px;
+        height: 40px;
+        border-radius: 8px;
+        text-indent: 10px;
+        color: var(--corTxt1);
+        font-size: .9em;
+    }
+     .inputs:focus{
+        outline: none;
+        border: 1px solid var(--corLogo);
+    }
+     .formulario > .login{
+        animation-delay: 0.3s;
+    }
+    .formulario > .senha{
+        margin-top: 30px;
+
+        animation-delay: 0.4s;
+    }
+    .formulario > .txtEsqueceu{
+        color: var(--corTxt1);
+        align-self: self-end;
+        margin-top: 10px;
+        font-size: .9em;
+        cursor: pointer;
+
+        animation-delay: 0.5s;
+    }
+    .txtEsqueceu:hover{
+        color: #60519B;
+    }
+
+    .btnEntrarContainer{
+        animation-delay: 0.6s;
+    }
+
+    .formulario .btnEntrar{
+        margin-top: 40px;
+        width: 250px;
+        height: 35px;
+        border-radius: 5px;
+        border: transparent;
+        font-size: 1em;
+        color: var(--corFundo1);
+        background-color: var(--corTxt1);
+        cursor: pointer;
+
+        transition: .2s ease;
+    }
+     .btnEntrar:hover, .btnGoogle:hover{
+        transform: translateY(-3px);
+    }
+    .separadorContainer{
+        margin-top: 30px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        animation-delay: 0.7s;
+    }
+
+    .linha{
+        border: 1px solid #484855;
+        width: 200px;
+    }
+
+    .separadorContainer > p{
+        color: var(--corTxt1);
+    }
+     .btnGoogleContainer{
+        animation-delay: 0.8s;
+    }
+    .btnGoogle{
+        width: 250px;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 10px;
+
+        background-color: var(--corFundo1);
+        border: transparent;
+        color: var(--corTxt2);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .2s ease;
+
+    }
+    .btnGoogle > img{
+        width: 20px;
+       
+    }
+
+    .btnGoogle > span{
+        font-size: 1em;
+        margin-left: 5px;
+    }
+    .txtNaoResgistrado{
+        margin-top: 25px;
+        text-align: center;
+        color: var(--corTxt2);
+        font-size: .9em;
+        cursor: pointer;
+    }
+    .txtNaoResgistrado > span{
+        color: var(--corLogo);
+    }
+
+    .txtNaoResgistrado > span:hover{
+        text-decoration: underline;
+    }
+
+    .aLink{
+        animation-delay: 0.9s;
+    }
+    a{
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+    
+    @keyframes surgirEsquerda{
+        0%{
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+   @keyframes luzFundo {
+    from {
+        background-position: 0% 30%;
+    }
+
+    to {
+        background-position: 100% 70%;
+    }
+}
+

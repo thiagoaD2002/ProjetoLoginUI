@@ -9,39 +9,43 @@
 </head>
 <body>
     <main>
-        <div class="logoContainer">
+        <div class="logoContainer animar">
             <img src="./src/media/logo.svg">
             <p1 class="titLogo">Nexora</p1>
         </div>
 
-        <div class="cabecalhoContainer">
+        <div class="cabecalhoContainer animar">
             <p class="txtCabecalho cabeca1">Olá, bem-vindo de volta!</p>
             <p class="txtCabecalho cabeca2">faça login para continuar</p>
         </div>
 
         <form class="formulario">
 
-            <input type="text" name="login" id="iLogin" class="login inputs" autocomplete="off" placeholder="Login">
-            <input type="password" name="senha" id="iSenha" class="senha inputs" autocomplete="off" placeholder="Senha">
+            <input type="text" name="login" id="iLogin" class="login inputs animar" autocomplete="off" placeholder="Login">
+            <input type="password" name="senha" id="iSenha" class="senha inputs animar" autocomplete="off" placeholder="Senha">
 
-            <p class="txtEsqueceu">Esqueceu a senha?</p>
+            <p class="txtEsqueceu animar">Esqueceu a senha?</p>
 
-            <button type="submit" class="btnEntrar">Entrar</button>
+            <div class="btnEntrarContainer animar">
+                <button type="submit" class="btnEntrar">Entrar</button>
+            </div>
 
         </form>
 
-        <div class="separadorContainer">
+        <div class="separadorContainer animar">
             <div class="linha linha1"></div>
             <p>ou</p>
             <div class="linha linha2"></div>
         </div>
 
-        <button type="submit" class="btnGoogle">
-            <img src="./src/media/google.svg">
-            <span>Entrar com o Google</span>
-        </button>
+        <div class="animar btnGoogleContainer">
+            <button type="submit" class="btnGoogle">
+                <img src="./src/media/google.svg">
+                <span>Entrar com o Google</span>
+            </button>
+        </div>
 
-        <a href="./pgcriarConta.html" rel="norefferer next" target="_self">
+        <a href="./pgcriarConta.html" rel="norefferer next" target="_self" class="aLink animar">
             <p class="txtNaoResgistrado">Não é registrado? <span>Criar uma conta</span></p>
         </a>
 

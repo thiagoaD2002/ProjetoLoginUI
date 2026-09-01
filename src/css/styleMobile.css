@@ -1,237 +1,60 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    /*PALETA*/
-    --corFundo1: #1E202C;
-    --corFundo2: #31323E;
-    --corTxt2: #BFC0D1;
-    --corTxt1: #F0F1F8;
-    --corLogo: #60519B;
-
-    /*FONTES*/
-    --fontLogo: "Outfit", sans-serif;
-    --fontGeral: "Inter", sans-serif;
-
-    font-family: var(--fontGeral);
-}
 
 @media screen and (max-width: 768px) {
-    body{
-        width: 100%;
-        height: 100vh;
-
-        background-color: var(--corFundo1);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+    
     main{
         width: calc(100% - 24px);
         height: 620px;
-
-        background-color: var(--corFundo2);
         border-radius: 10px;
-
-        box-shadow: 
-        inset  4px 4px 8px 0px #bfc0d13c,
-        inset -4px 4px 8px 0px #bfc0d13c,
-        inset 4px -4px 8px 0px #bfc0d13c,
-        inset -4px -4px 8px 0px #bfc0d13c;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
         
     }
 
-    main > *{
+    .animar{
         opacity: 0;
         animation: surgirEsquerda 0.6s ease forwards;
     }
 
-    main > *:nth-child(1){
+    .logoContainer{
+        justify-content: center;
+        margin-top: 15px;
         animation-delay: 0.1s;
     }
-    main > *:nth-child(2){
-        animation-delay: 0.2s;
-    } 
-    main > *:nth-child(3){
-        animation-delay: 0.3s;
-    } 
-    main > *:nth-child(4){
-        animation-delay: 0.4s;
-    } 
-    main > *:nth-child(5){
-        animation-delay: 0.5s;
-    }
-    main > *:nth-child(6){
-        animation-delay: 0.6s;
-    }
-
-    .logoContainer{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 15px;
-    }
-
+     .logoContainer > img{
+        width: 25px;
+     }
     .logoContainer > .titLogo{
-        color: var(--corLogo);
-        font-family: var(--fontLogo);
-        font-size: 1.7em;
-       
+        font-size: 1.7em; 
     }
 
-    .cabecalhoContainer{
-        margin-top: 25px;
-       
-    }
-
-    .cabecalhoContainer > .txtCabecalho{
-        text-align: center;
-        color: var(--corTxt1);
-    }
     .cabeca1{
         font-size: 1.4em;
     }
-    .cabeca2{
-        margin-top: 5px;
-        font-size: .9em;
-    }
 
     .formulario{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
         margin-top: 50px;
     }
 
     .formulario > .inputs{
-        background-color: #31323E;
-        border: 1px solid #bfc0d165;
         width: 250px;
         height: 35px;
         border-radius: 5px;
-        text-indent: 10px;
-        color: var(--corTxt1);
-        font-size: .9em;
     }
 
-    .inputs:focus{
-        outline: none;
-        border: 1px solid var(--corLogo);
-    }
-
-    .formulario > .senha{
-        margin-top: 30px;
-    }
-
-    .formulario > .txtEsqueceu{
-        color: var(--corTxt1);
-        align-self: center;
-        margin-left: 115px;
-        margin-top: 10px;
-        font-size: .9em;
-        cursor: pointer;
-    }
-
-    .txtEsqueceu:hover{
-        color: #60519B;
-    }
-
-    .formulario > .btnEntrar{
+    .formulario .btnEntrar{
         margin-top: 50px;
-        width: 250px;
-        height: 35px;
-        border-radius: 5px;
-        border: transparent;
-        font-size: 1em;
-        color: var(--corFundo1);
-        background-color: var(--corTxt1);
-        cursor: pointer;
-
-        transition: .2s ease;
     }
-
-    .btnEntrar:hover, .btnGoogle:hover{
-        transform: translateY(-3px);
-    }
-
     .separadorContainer{
-        /* border: 1px solid red; */
-        margin-top: 30px;
         width: 390px;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-
     }
 
     .linha{
-        border: 1px solid #484855;
         width: 120px;
     }
-
-    .separadorContainer > p{
-        color: var(--corTxt1);
+    .aLink{
+        animation-delay: 0.9s;
     }
 
-    .btnGoogle{
-        width: 250px;
-        height: 40px;
-        border-radius: 5px;
-        margin-top: 20px;
-
-        background-color: var(--corFundo1);
-        border: transparent;
-        color: var(--corTxt2);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: .2s ease;
-
-    }
-
-    .btnGoogle > img{
-        width: 20px;
-       
-    }
-
-    .btnGoogle > span{
-        font-size: 1em;
-        margin-left: 5px;
-    }
-
-    .txtNaoResgistrado{
-        margin-top: 25px;
-        text-align: center;
-        color: var(--corTxt2);
-        font-size: .9em;
-        cursor: pointer;
-    }
-
-    .txtNaoResgistrado > span{
-        color: var(--corLogo);
-    }
-
-    a{
-        text-decoration: none;
-    }
+    
 
     @keyframes surgirEsquerda{
         0%{
