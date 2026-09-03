@@ -8,7 +8,7 @@ class AnimaInput{
 
     capturaInput(inputsForm){
         inputsForm.forEach((el)=>{
-           el.addEventListener('click',() => this.pulaInput(el))
+           el.addEventListener('focus',() => this.pulaInput(el))
         })
     }
 
