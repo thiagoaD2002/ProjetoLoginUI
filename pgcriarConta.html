@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexora</title>
     <link rel="stylesheet" href="./src/css/styleCriarConta.css">
+    <link rel="stylesheet" href="./src/css/styleCriarContaMobile.css">
 </head>
 <body>
     <main>
@@ -37,11 +38,11 @@
 
             <div class="inputContainer">
                 <img src="./src/media/passwordIcon.svg" class="iconRpPassword">
-                <input type="password" name="password" class="password rpPassoword" autocomplete="off" placeholder="Confirmar senha">
+                <input type="password" name="password" class="password rpPassoword inputs" autocomplete="off" placeholder="Confirmar senha">
             </div>
         </section>
 
-        <button class="btnCriarConta">Criar conta</button>
+        <div class="btnCriarContaContainer"><button class="btnCriarConta">Criar conta</button></div>
 
         <div class="voltarContainer">
             <img src="./src/media/iconVoltar.svg">
@@ -51,7 +52,7 @@
         </div>
     </main>
 
-    <script src="./src/js/pgCriarConta.js"></script>
+    <script type="module" src="./src/js/pgCriarConta.js"></script>
     
 </body>
 </html>

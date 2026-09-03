@@ -1,0 +1,58 @@
+
+@media screen and (max-width: 600px) {
+  
+    main{
+        width: calc(100% - 24px); 
+    }
+     .logoContainer > .titLogo{
+        font-size: 1.7em;
+       
+    }
+    .cabeca1{
+        font-size: 1.4em;
+    }
+
+    .inputsContainer{
+        /* border: 1px solid red; */
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: self-start;
+    }
+
+    .inputContainer{
+        margin-left: 10px;
+    }
+    .inputContainer > img{
+        width: 25px;
+    }
+
+    .animaIcon{
+        animation: animaIcon .4s ease-in-out;
+    }
+
+    .inputContainer > input{
+        width: 250px;
+        height: 35px;
+        border-radius: 5px;
+    }
+    .btnCriarConta{
+        border-radius: 5px;
+    }
+    .voltarContainer > img{
+        width: 20px;
+        animation: animaBack 2s infinite ease-in-out;
+    }
+
+    .voltarContainer > p{
+        color: var(--corTxt1);
+        font-size: .9em;
+        letter-spacing: .3px;
+    }
+
+    .voltarContainer a{
+        text-decoration: none;
+        color: var(--corTxt1);
+    }
+}

@@ -1,3 +1,5 @@
+import AnimaInput from "./pgHome.js"
+
 class animaIcon{
     constructor(){
         this.inputs = document.querySelectorAll(".inputs")
@@ -6,7 +8,7 @@ class animaIcon{
     }
 
     animaBotao(){
-       this.inputs.forEach((el,index)=>{
+       this.inputs.forEach((el)=>{
         el.addEventListener("click",()=>{
             const img = el.previousElementSibling
             img.classList.remove('animaIcon')
@@ -18,3 +20,4 @@ class animaIcon{
 }
 
 const a1 = new animaIcon()
+const animaInput = new AnimaInput()

@@ -21,221 +21,231 @@
 
     font-family: var(--fontGeral);
 }
+body{
+    width: 100%;
+    height: 100vh;
 
-@media screen and (max-width: 600px) {
-    body{
-        width: 100%;
-        height: 100vh;
+    background-color: var(--corFundo1);
 
-        background-color: var(--corFundo1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow-x: hidden;
-    }
-    main{
-        width: calc(100% - 24px);
-        height: 620px;
+main{
+    width: calc(100% - 500px);
+    height: 620px;
 
-        background-color: var(--corFundo2);
-        border-radius: 10px;
+    background-color: var(--corFundo2);
+    border-radius: 10px;
 
-        box-shadow: 
-        inset  4px 4px 8px 0px #bfc0d13c,
-        inset -4px 4px 8px 0px #bfc0d13c,
-        inset 4px -4px 8px 0px #bfc0d13c,
-        inset -4px -4px 8px 0px #bfc0d13c;
+    box-shadow: 
+    inset  4px 4px 8px 0px #bfc0d13c,
+    inset -4px 4px 8px 0px #bfc0d13c,
+    inset 4px -4px 8px 0px #bfc0d13c,
+    inset -4px -4px 8px 0px #bfc0d13c;
 
-        display: flex;
-        flex-direction: column;
-        
-        
+    display: flex;
+    flex-direction: column;
+}
+
+main > *{
+    opacity: 0;
+    animation: surgirDireita ease .6s forwards;
+}
+
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+    
+    animation-delay: .1s;
+}
+
+.logoContainer>.titLogo {
+    color: var(--corLogo);
+    font-family: var(--fontLogo);
+    font-size: 2em;
+
+}
+.cabecalhoContainer {
+    margin-top: 25px;
+    animation-delay: .2s;
+}
+.cabecalhoContainer>.txtCabecalho {
+    text-align: center;
+    color: var(--corTxt1);
+}
+.cabeca1 {
+    font-size: 1.5em;
+}
+.cabeca2 {
+    margin-top: 5px;
+    font-size: .9em;
+}
+.inputsContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputsContainer >  * {
+    opacity: 0;
+   animation: surgirDireita ease .6s forwards;
+}
+
+.inputsContainer > :nth-child(1){
+    animation-delay: .3s;
+}
+
+.inputsContainer > :nth-child(2){
+    animation-delay: .4s;
+}
+.inputsContainer > :nth-child(3){
+    animation-delay: .5s;
+}
+.inputsContainer > :nth-child(4){
+    animation-delay: .6s;
+}
+
+.inputContainer {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.inputContainer>.iconRpPassword {
+    opacity: 0;
+}
+
+.inputContainer>img {
+    width: 27px;
+}
+.inputContainer>input {
+    background-color: #31323E;
+    border: 1px solid #bfc0d165;
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    text-indent: 10px;
+    color: var(--corTxt1);
+    font-size: .9em;
+    margin-left: 5px;
+
+}
+.inputContainer>input:focus {
+    outline: none;
+    border: 1px solid var(--corLogo);
+}
+
+.btnCriarContaContainer{
+    align-self: center;
+    animation-delay: .7s;
+}
+.btnCriarConta {
+    margin-top: 30px;
+    width: 250px;
+    height: 35px;
+    border-radius: 8px;
+
+    background-color: var(--corLogo);
+    color: var(--corTxt1);
+    border: transparent;
+
+    cursor: pointer;
+    transition: ease .3s;
+}
+.btnCriarConta:hover {
+    transform: translateY(-3px);
+}
+.voltarContainer {
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    align-self: self-start; cursor: pointer;
+    animation-delay: .8s;
+}
+.voltarContainer>img {
+    width: 20px;
+    animation: animaBack 2s infinite ease-in-out;
+}
+.voltarContainer>p {
+    color: var(--corTxt1);
+    font-size: .9em;
+    letter-spacing: .3px;
+}
+
+.voltarContainer a {
+    text-decoration: none;
+    color: var(--corTxt1);
+}
+.animaIcon {
+    animation: animaIcon .4s ease-in-out;
+}
+.pulaInput {
+    animation: pulaInput .3s ease-in-out forwards;
+}
+@keyframes animaIcon {
+    0% {
+        transform: translateY(0);
     }
 
-    main > *{
-        opacity: 0;
-        animation: surgirDireita ease .6s forwards;
-    }
-
-    main > *:nth-child(1){
-        animation-delay: .1s;
-    }
-    main > *:nth-child(2){
-        animation-delay: .2s;
-    }
-    main > *:nth-child(3){
-        animation-delay: .3s;
-    }
-    main > *:nth-child(4){
-        animation-delay: .4s;
-    }
-    main > *:nth-child(5){
-        animation-delay: .5s;
-    }
-
-    .logoContainer{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 15px;
-    }
-     .logoContainer > .titLogo{
-        color: var(--corLogo);
-        font-family: var(--fontLogo);
-        font-size: 1.7em;
-       
-    }
-    .cabecalhoContainer{
-        margin-top: 25px;
-       
-    }
-    .cabecalhoContainer > .txtCabecalho{
-        text-align: center;
-        color: var(--corTxt1);
-    }
-    .cabeca1{
-        font-size: 1.4em;
-    }
-    .cabeca2{
-        margin-top: 5px;
-        font-size: .9em;
-    }
-
-    .inputsContainer{
-        /* border: 1px solid red; */
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .inputContainer{
-        margin-left: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        
-    }
-
-    .inputContainer > .iconRpPassword{
-        opacity: 0;
-    }
-
-    .inputContainer > img{
-        width: 25px;
-    }
-
-    .animaIcon{
-        animation: animaIcon .4s ease-in-out;
-
-    }
-
-    .inputContainer > input{
-        background-color: #31323E;
-        border: 1px solid #bfc0d165;
-        width: 250px;
-        height: 35px;
-        border-radius: 5px;
-        text-indent: 10px;
-        color: var(--corTxt1);
-        font-size: .9em;
-        margin-left: 5px;
-
-        
-    }
-
-     .inputContainer > input:focus{
-        outline: none;
-        border: 1px solid var(--corLogo);
-    }
-
-    .btnCriarConta{
-        margin-top: 30px;
-        width: 250px;
-        height: 35px;
-        border-radius: 5px;
-        align-self: center;
-
-        background-color: var(--corLogo);
-        color: var(--corTxt1);
-        border: transparent;
-
-        cursor: pointer;
-        transition: ease .3s;
-    }
-
-    .btnCriarConta:hover{
+    50% {
         transform: translateY(-3px);
     }
 
-    .voltarContainer{
-        margin-left: 30px;
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    100% {
+        transform: translateY(0);
+    }
+}
 
-        align-self: self-start;
-
-        cursor: pointer;
+@keyframes animaBack {
+    0% {
+        transform: translateX(0);
     }
 
-    .voltarContainer > img{
-        width: 20px;
-        animation: animaBack 2s infinite ease-in-out;
+    50% {
+        transform: translateX(3px);
     }
 
-    .voltarContainer > p{
-        color: var(--corTxt1);
-        font-size: .9em;
-        letter-spacing: .3px;
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes surgirDireita {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
     }
 
-    .voltarContainer a{
-        text-decoration: none;
-        color: var(--corTxt1);
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes pulaInput{
+    0%{
+        transform: translateY(0);
     }
 
-
-
-
-
-    @keyframes animaIcon{
-        0%{
-            transform: translateY(0);
-        }
-        50%{
-            transform: translateY(-3px);
-        }
-        100%{
-            transform: translateY(0);
-        }
+    50%{
+        transform: translateY(-2px);
     }
 
-     @keyframes animaBack{
-        0%{
-            transform: translateX(0);
-        }
-        50%{
-            transform: translateX(3px);
-        }
-        100%{
-            transform: translateY(0);
-        }
+    100%{
+        transform: translateY(0);
     }
-       @keyframes surgirDireita{
-        0%{
-            opacity: 0;
-            transform: translateX(30px);
-        }
-
-        100%{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
 }

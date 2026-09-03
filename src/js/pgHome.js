@@ -8,14 +8,17 @@ class AnimaInput{
 
     capturaInput(inputsForm){
         inputsForm.forEach((el)=>{
-           el.addEventListener('click', () => {
-            el.classList.remove('pulaInput')
-            void el.offsetWidth
-            el.classList.add('pulaInput')
-           })
+           el.addEventListener('click',() => this.pulaInput(el))
         })
+    }
+
+    pulaInput(el){
+        el.classList.remove('pulaInput')
+        void el.offsetWidth
+        el.classList.add('pulaInput')
     }
 }
 
 const a1 = new AnimaInput()
 
+export default AnimaInput
