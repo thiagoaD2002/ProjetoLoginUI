@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/pgEsqueceuSenha/styleDesktop.css">
+    <link rel="stylesheet" href="./src/css/pgEsqueceuSenha/styleMobile.css">
+    <title>Nexora</title>
+
+</head>
+<body>
+    <main>
+        <div class="logoContainer animar">
+            <img src="./src/media/logo.svg">
+            <p class="titLogo">Nexora</p>
+        </div>
+
+        <div class="cabecalhoContainer animar">
+            <p class="txtCabecalho ">Digite sua nova senha abaixo:</p>
+            <ul>
+                <li class="condicoes">sua senha deve conter entre 8 a 20 caractéres</li>
+                <li class="condicoes">possuir caractéres especais: .,@#$%*&!</li>
+                <li class="condicoes">possuir números</li>
+                <li class="condicoes">letras maiúsculas e minúsculas</li>
+            </ul>
+        </div>
+
+        <section class="inputsContainer">
+            <div class="senhaContainer animar">
+                <input type="password" name="senha" class="senha inputs">
+                <p class="msgErroSenha">Senha inválida</p>
+            </div>
+
+            <div class="repSenhaContainer animar">
+                <input type="password" name="senha" class="repSenha inputs" min="8" max="20">
+            </div>
+
+            <div class="btnConfirmarContainer animar">
+                <button type="submit" class="btnConfirmar">Confirmar</button>
+            </div>
+        </section>
+
+        <div class="btnVoltarContainer animar">
+            <a href="./index.html" rel="norefferer previous" target="_self">
+                <img src="./src/media/iconVoltar.svg">
+                <p>Voltar</p>
+            </a>
+        </div>
+
+    </main>
+
+    <script type="module" src="./src/js/pgEsqueceuSenha/pgEsqueceuSenha.js"></script>
+</body>
+</html>

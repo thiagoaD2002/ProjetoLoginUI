@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*PALETA*/
+    --corFundo1: #1E202C;
+    --corFundo2: #31323E;
+    --corTxt2: #BFC0D1;
+    --corTxt1: #F0F1F8;
+    --corLogo: #60519B;
+
+    /*FONTES*/
+    --fontLogo: "Outfit", sans-serif;
+    --fontGeral: "Inter", sans-serif;
+
+    font-family: var(--fontGeral);
+}
+
+@media screen and (max-width: 768px){
+    body{
+        width: 100%;
+        height: 100vh;
+        
+        background: radial-gradient(circle at 20% 30%,
+                rgba(129, 107, 215, 0.18),
+                transparent 45%),
+                #1E202C;
+        background-size: 200% 200%;
+        animation: luzFundo 12s ease-in-out infinite alternate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .animar{
+        opacity: 0;
+        animation: surgirEsquerda .6s ease forwards;
+    }
+
+    main{
+        width: calc(100% - 140px);
+        height: 580px;
+        
+        background-color: var(--corFundo2);
+        border-radius: 20px;
+        
+        box-shadow:
+            inset 4px 4px 8px 0px #bfc0d13c,
+            inset -4px 4px 8px 0px #bfc0d13c,
+            inset 4px -4px 8px 0px #bfc0d13c,
+            inset -4px -4px 8px 0px #bfc0d13c;
+        
+        
+    }
+
+    main > :nth-child(1){
+        animation-delay: .1s;
+    }
+    main > :nth-child(2){
+        animation-delay: .2s;
+    }
+    .senhaContainer{
+        animation-delay: .3s;
+    }
+    .repSenhaContainer{
+        animation-delay: .4s;
+    }
+    .btnConfirmarContainer{
+        animation-delay: .5s;
+    }
+    main > :nth-child(4){
+        animation-delay: .6s;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+            
+        animation-delay: 0.1s;
+        margin-top: 20px;
+        
+    }
+    .logoContainer > img{
+        width: 25px;
+    }
+    .logoContainer > .titLogo{
+        font-size: 1.7em; 
+        color: var(--corLogo);
+        font-family: var(--fontLogo);
+    }
+
+    .cabecalhoContainer{
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+    .cabecalhoContainer > .txtCabecalho{
+        text-align: left;
+        color: var(--corTxt1);
+        font-size: 1.2em;
+    }
+    .cabecalhoContainer > ul {
+        margin-top: 10px;
+        margin-left: 10px;
+        
+    }
+    .cabecalhoContainer > ul > li{
+        list-style-position: inside;
+        color: var(--corTxt2);
+        font-size: .9em;
+        line-height: 19px;
+        transition: .3s ease;
+    }
+
+    .inputsContainer{
+        margin-top: 25px;
+        margin-left: 20px;
+    }
+    .inputsContainer .inputs{
+        background-color: #31323E;
+        border: 1px solid #bfc0d165;
+        width: 250px;
+        height: 35px;
+        border-radius: 8px;
+        text-indent: 10px;
+        color: var(--corTxt1);
+        font-size: .9em;
+    }
+    .inputs:focus{
+        outline: none;
+        border: 1px solid var(--corLogo);
+    }
+    .repSenhaContainer{
+        margin-top: 25px;
+    }
+    
+    .msgErroSenha{
+        display: none;
+        font-size: .9em;
+        text-indent: 5px;
+        margin-top: 5px;
+        color: tomato;
+    }
+
+    .btnConfirmar{
+        margin-top: 50px;
+        width: 150px;
+        height: 35px;
+        border-radius: 5px;
+        border: transparent;
+        font-size: .9em;
+        color: var(--corFundo1);
+        background-color: var(--corTxt1);
+        cursor: pointer;
+
+        transition: .2s ease;
+    }
+
+    .btnVoltarContainer{
+        margin-left: 25px;
+        margin-top: 50px;
+    }
+
+    .btnVoltarContainer > a{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: start;
+        justify-self: flex-start;
+        text-decoration: none;
+        color: var(--corTxt1);
+
+    }
+
+    .btnVoltarContainer  img{
+        width: 25px;
+        animation: animaBack 2s infinite ease-in-out;
+
+    }
+    .btnVoltarContainer > p{
+        font-size: .9em;
+    }
+    .btnConfirmar:hover{
+        transform: translateY(-3px);
+    }
+
+    .pulaInput{
+        animation: pulaInput .3s ease-in-out forwards;
+    }
+    @keyframes surgirEsquerda{
+        0%{
+            opacity: 0;
+            transform: translateX(40px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes pulaInput{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-2px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+    @keyframes animaBack {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+}
