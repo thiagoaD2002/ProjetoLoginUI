@@ -35,6 +35,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        overflow-x: hidden;
     }
     .animar{
         opacity: 0;
@@ -42,7 +44,7 @@
     }
 
     main{
-        width: calc(100% - 140px);
+        width: calc(100% - 24px);
         height: 580px;
         
         background-color: var(--corFundo2);
@@ -53,7 +55,6 @@
             inset -4px 4px 8px 0px #bfc0d13c,
             inset 4px -4px 8px 0px #bfc0d13c,
             inset -4px -4px 8px 0px #bfc0d13c;
-        
         
     }
 
