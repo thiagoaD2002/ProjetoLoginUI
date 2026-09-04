@@ -178,7 +178,7 @@
     }
 
     .btnVoltarContainer  img{
-        width: 25px;
+        width: 20px;
         animation: animaBack 2s infinite ease-in-out;
 
     }
