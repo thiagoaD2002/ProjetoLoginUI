@@ -1,3 +1,5 @@
+
+
 class AnimaInput{
     constructor(){
         this.inputsForm = document.querySelectorAll(".inputs")
@@ -22,3 +24,4 @@ class AnimaInput{
 const a1 = new AnimaInput()
 
 export default AnimaInput
+

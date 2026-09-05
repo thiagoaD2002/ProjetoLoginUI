@@ -1,5 +1,5 @@
 import AnimaInput from "./pgHome.js"
-
+import VerificaSenha from "./pgEsqueceuSenha/pgEsqueceuSenha.js"
 class animaIcon{
     constructor(){
         this.inputs = document.querySelectorAll(".inputs")
@@ -21,3 +21,4 @@ class animaIcon{
 
 const a1 = new animaIcon()
 const animaInput = new AnimaInput()
+const verificaSenha = new VerificaSenha()

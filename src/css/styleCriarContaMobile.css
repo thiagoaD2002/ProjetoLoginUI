@@ -11,10 +11,20 @@
     .cabeca1{
         font-size: 1.4em;
     }
-
+    ul{
+        list-style-position: inside;
+        margin-top: 40px;
+        align-self: flex-start;  
+        margin-left: 25px; 
+    }
+    ul > li{
+        font-size: .9em;
+        line-height: 19px;
+        
+    }
     .inputsContainer{
         /* border: 1px solid red; */
-        margin-top: 50px;
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
         gap: 25px;

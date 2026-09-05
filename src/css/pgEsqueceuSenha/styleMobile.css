@@ -45,7 +45,7 @@
 
     main{
         width: calc(100% - 24px);
-        height: 580px;
+        min-height: 600px;
         
         background-color: var(--corFundo2);
         border-radius: 20px;
@@ -55,6 +55,8 @@
             inset -4px 4px 8px 0px #bfc0d13c,
             inset 4px -4px 8px 0px #bfc0d13c,
             inset -4px -4px 8px 0px #bfc0d13c;
+        
+        transition: .3s;
         
     }
 
@@ -142,6 +144,11 @@
     
     .msgErroSenha{
         display: none;
+    }
+    .msgErroRepSenha{
+        display: none;
+    }
+    .erroSenha{
         font-size: .9em;
         text-indent: 5px;
         margin-top: 5px;
@@ -165,6 +172,7 @@
     .btnVoltarContainer{
         margin-left: 25px;
         margin-top: 50px;
+        justify-self: flex-start;
     }
 
     .btnVoltarContainer > a{
@@ -172,7 +180,6 @@
         align-items: center;
         flex-direction: column;
         justify-content: start;
-        justify-self: flex-start;
         text-decoration: none;
         color: var(--corTxt1);
 
@@ -227,6 +234,16 @@
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes luzFundo {
+    from {
+        background-position: 0% 30%;
+    }
+
+    to {
+        background-position: 100% 70%;
     }
 }
 

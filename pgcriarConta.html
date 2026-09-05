@@ -18,31 +18,39 @@
             <p class="txtCabecalho cabeca1">Junte-se á nossa equipe!</p>
             <p class="txtCabecalho cabeca2">complete seu cadastro</p>
         </div>
-
+        <ul class="animar">
+                <li class="condicoes">sua senha deve conter entre 8 a 20 caractéres</li>
+                <li class="condicoes">possuir caractéres especais: .,@#$%*&!</li>
+                <li class="condicoes">possuir números</li>
+                <li class="condicoes">letras maiúsculas e minúsculas</li>
+        </ul>
         <section class="inputsContainer">
 
-            <div class="inputContainer">
+            <div class="inputContainer animar">
                 <img src="./src/media/usernameIcon.svg" class="usernameIcon ">
-                <input type="text" name="username" class="username inputs" autocomplete="off" placeholder="Nome completo">
+                <input type="text" name="username" class="username inputs" autocomplete="off" placeholder="Nome completo" required>
             </div>
 
-            <div class="inputContainer">
+            <div class="inputContainer animar">
                 <img src="./src/media/emailIcon.svg">
-                <input type="text" name="email" class="email inputs" autocomplete="off" placeholder="E-mail">
+                <input type="text" name="email" class="email inputs" autocomplete="off" placeholder="E-mail" required>
             </div>
 
-            <div class="inputContainer">
+            <div class="inputContainer animar">
                 <img src="./src/media/passwordIcon.svg">
-                <input type="password" name="password" class="password inputs" autocomplete="off" placeholder="Senha">
+                <input type="password" name="password" class="senha inputs" autocomplete="off" placeholder="Senha">
             </div>
+            <p class="msgErroSenha erroSenha">Senha inválida</p>
 
-            <div class="inputContainer">
+            <div class="inputContainer animar">
                 <img src="./src/media/passwordIcon.svg" class="iconRpPassword">
-                <input type="password" name="password" class="password rpPassoword inputs" autocomplete="off" placeholder="Confirmar senha">
+                <input type="password" name="password" class="repSenha rpPassoword inputs" autocomplete="off" placeholder="Confirmar senha">
             </div>
+            <p class="msgErroRepSenha erroSenha">As duas senhas devem ser iguais</p>
+
         </section>
 
-        <div class="btnCriarContaContainer"><button class="btnCriarConta">Criar conta</button></div>
+        <div class="btnCriarContaContainer"><button type="submit" class="btnCriarConta btnConfirmar">Criar conta</button></div>
 
         <div class="voltarContainer">
             <img src="./src/media/iconVoltar.svg">
@@ -50,6 +58,7 @@
                 <p>Voltar</p>
             </a>
         </div>
+
     </main>
 
     <script type="module" src="./src/js/pgCriarConta.js"></script>
