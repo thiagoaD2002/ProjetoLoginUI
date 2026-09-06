@@ -1,29 +1,12 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    /*PALETA*/
-    --corFundo1: #1E202C;
-    --corFundo2: #31323E;
-    --corTxt2: #BFC0D1;
-    --corTxt1: #F0F1F8;
-    --corLogo: #60519B;
-
-    /*FONTES*/
-    --fontLogo: "Outfit", sans-serif;
-    --fontGeral: "Inter", sans-serif;
-
-    font-family: var(--fontGeral);
-}
 
 @media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
     main{
         width: calc(100% - 24px);
+        
     }
     .logoContainer > img{
         width: 25px;
@@ -39,8 +22,9 @@
     .cabecalhoContainer > .txtCabecalho{
         font-size: 1.2em;
     }
+    
     .cabecalhoContainer > ul > li{
-        font-size: .9em;
+        font-size: .8em;
     }
 
     .inputsContainer{
