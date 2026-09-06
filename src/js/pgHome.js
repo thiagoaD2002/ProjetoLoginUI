@@ -25,3 +25,15 @@ const a1 = new AnimaInput()
 
 export default AnimaInput
 
+class RemoveBtn{
+    constructor(){
+        const btnEntrar = document.querySelector(".btnEntrar")
+        btnEntrar.addEventListener("click",(evt)=>{
+            evt.preventDefault()
+
+            window.location.href = './pagLogou.html'
+        })
+    }
+}
+
+const r1 = new RemoveBtn()

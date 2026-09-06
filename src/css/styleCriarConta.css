@@ -42,7 +42,7 @@ body{
 main{
     width: calc(100% - 500px);
     min-height: 620px;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
 
     background-color: var(--corFundo2);
     border-radius: 10px;
@@ -132,6 +132,7 @@ ul{
 ul > li{
     font-size: 1em;
     color: var(--corTxt2);
+    transition: .3s ease;
 }
 .inputContainer {
     margin-left: 10px;
